@@ -7,10 +7,11 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class TextFieldEspia extends TextField {
 
-    private String ficheroLog = "src/ficheroLog.txt";
+    private String ficheroLog = "src/ficheroPalabras.txt";
     FileWriter fichero = null;
     PrintWriter pw = null;
     private ArrayList<String> listaPalabras = new ArrayList<String>();
@@ -28,6 +29,8 @@ public class TextFieldEspia extends TextField {
                 try {
                     fichero = new FileWriter(ficheroLog, true);
                     pw = new PrintWriter(fichero);
+                    Date fecha = new Date();
+                    pw.println(newValue + " " +  fecha.toString());
 
 
                 }catch(IOException e){
@@ -57,14 +60,13 @@ public class TextFieldEspia extends TextField {
         int minutos = locaDate.getMinute();
         int segundos = locaDate.getSecond();
         String tiempo = " 'año'";
-    }
-
-    public void añadirPalabra(String nuevaPalabra){
-        listaPalabras.add(nuevaPalabra);
-
         /*
         * DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
  Date date = new Date();
   System.out.println("Hora actual: " + dateFormat.format(date));*/
+    }
+
+    public void añadirPalabra(String nuevaPalabra){
+        listaPalabras.add(nuevaPalabra);
     }
 }
