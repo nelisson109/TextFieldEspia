@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 public class Principal extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("VentanaTextFieldEspia.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("VentanaEspia.fxml"));
 
         Scene scene = new Scene(root, 500, 500);
         stage.setScene(scene);

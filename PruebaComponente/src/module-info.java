@@ -4,6 +4,7 @@ module PruebaComponente {
     requires javafx.base;
     requires javafx.graphics;
     requires javafx.controls;
+    requires TextFieldEspia;
 
     //requires jdk.internal.le;
     requires javafx.fxml;
